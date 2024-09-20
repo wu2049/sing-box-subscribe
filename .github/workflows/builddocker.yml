@@ -35,5 +35,5 @@ jobs:
           #编译的目标系统，为了方便玩客云，所以我编译了 arm/v7,amd64
           platforms: linux/arm64,amd64
           push: true
-            #docker提交的名字
+          #docker提交的名字
           tags: "sztuxp/sing-box-subscribe:1.0.0,sztuxp/sing-box-subscribe:latest"标签：“
