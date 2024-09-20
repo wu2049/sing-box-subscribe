@@ -1,13 +1,11 @@
 name: build sing-box-subscribe
 
 on:
-    # 手动触发
-    workflow_dispatch:
+  # 手动触发
+  workflow_dispatch:
 
 jobs:
-
   build:
-  
     runs-on: ubuntu-latest
 
     steps:
@@ -32,8 +30,8 @@ jobs:
         with:
           #Dockerfile的目录
           context: ./
-          #编译的目标系统，为了方便玩客云，所以我编译了 arm/v7,amd64
-          platforms: linux/arm64,amd64
+          #编译的目标系统，为了方便玩客云，所以我编译了 arm64和amd64
+          platforms: linux/arm64,linux/amd64
           push: true
           #docker提交的名字
-          tags: "sztuxp/sing-box-subscribe:1.0.0,sztuxp/sing-box-subscribe:latest"标签：“
+          tags: sztuxp/sing-box-subscribe:1.0.0,sztuxp/sing-box-subscribe:latest
